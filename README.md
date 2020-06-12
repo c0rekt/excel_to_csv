@@ -9,7 +9,7 @@ Requirements
 
 Purpose
 
-The purpose of this program is to convert Excel extension files to CSV format.
+-The purpose of this program is to convert Excel extension files to CSV format.
 
 Syntax
 
