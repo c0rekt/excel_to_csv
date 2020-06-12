@@ -5,7 +5,7 @@ Requirements
 
 -PowerShell
 
--Excel Program
+-Activated Microsoft Excel(Unactivated Microsoft does not work)
 
 Purpose
 
