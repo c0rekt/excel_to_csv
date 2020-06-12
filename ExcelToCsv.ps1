@@ -1,6 +1,6 @@
-﻿####################################
+####################################
 #         Author:c0rekt            #
-#          version 1.0             #
+#          version 1.1             #
 #    Excel to csv converter        #
 ####################################
 
@@ -14,6 +14,7 @@ function ExcelToCsv {
         [string]$Delimiter,
         [int]$RowStart
     )
+    if(($ExcelFileName) -and ($ExcelFilePath) -and ($SheetName) -and ($CsvLocation) -and ($Delimiter) -and ($RowStart)){
     $excelfile = "$($ExcelFilePath)$($ExcelFileName)"
     $excel = New-Object -ComObject Excel.Application
     $excelWorkbook = $excel.Workbooks.Open("$excelfile")
@@ -35,6 +36,10 @@ function ExcelToCsv {
     }
     $OutputFileName = [io.path]::GetFileNameWithoutExtension($ExcelFileName)
     Write-output "$($output)" >> "$($CsvLocation)$($OutputFileName).csv"
+    }
+    else {
+        Write-output "Missing parameters, please check again"
+    }
 }
 $excel.Workbooks.Close()
 Export-ModuleMember -Function * -Alias *
