@@ -1,5 +1,5 @@
 # excel_to_csv
-A PowerShell function that converts excel to csv
+A PowerShell function that converts excel to csv. Great for automation purposes.
 
 Requirements
 
